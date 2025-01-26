@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TivaraX - Innovating the Future of Technology</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-bg {
+            background: url('https://source.unsplash.com/1600x900/?technology,vehicles') center/cover no-repeat;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #3B82F6, #10B981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .tech-card {
+            transition: transform 0.3s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-card {
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.02);
+        }
+
+        .hero .text {
+            backdrop-filter: blur(5px);
+            padding: 50px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-text">TivaraX</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-blue-600 transition">Home</a>
+                <a href="#about" class="hover:text-blue-600 transition">About</a>
+                <a href="#technologies" class="hover:text-blue-600 transition">Technologies</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+            </div>
+            <button class="md:hidden" onclick="toggleMenu()">
+                <i class="bi bi-list text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white transform translate-x-full transition-transform duration-300 z-40">
+        <div class="p-6">
+            <div class="flex justify-end">
+                <button onclick="toggleMenu()">
+                    <i class="bi bi-x text-3xl"></i>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-4 mt-8">
+                <a href="#home" class="text-lg" onclick="toggleMenu()">Home</a>
+                <a href="#about" class="text-lg" onclick="toggleMenu()">About</a>
+                <a href="#technologies" class="text-lg" onclick="toggleMenu()">Technologies</a>
+                <a href="#projects" class="text-lg" onclick="toggleMenu()">Projects</a>
+                <a href="#contact" class="text-lg" onclick="toggleMenu()">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen relative">
+        <div class="container mx-auto px-4 pt-32 pb-16 relative z-10">
+            <div class="text text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    Innovating the Future of Technology
+                </h1>
+                <p class="text-xl md:text-2xl mb-12 opacity-90">
+                    Smarter Solutions for a Connected World
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="#projects" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition">
+                        Explore Our Solutions
+                    </a>
+                    <a href="#contact" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text">About TivaraX</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-blue-50 rounded-xl">
+                    <i class="bi bi-eye text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Vision</h3>
+                    <p>Driving innovation to empower businesses and individuals.</p>
+                </div>
+                <div class="text-center p-6 bg-blue-50 rounded-xl">
+                    <i class="bi bi-rocket text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Mission</h3>
+                    <p>Delivering scalable, reliable, and user-focused IT solutions.</p>
+                </div>
+                <div class="text-center p-6 bg-blue-50 rounded-xl">
+                    <i class="bi bi-stars text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Values</h3>
+                    <p>Innovation, excellence, and collaboration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Technologies Section -->
+    <section id="technologies" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text">Core Technologies</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="tech-card bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-blue-600 mb-4">
+                        <i class="bi bi-cloud text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Cloud & Microservices</h3>
+                    <p>Scalable, efficient backend solutions powered by cutting-edge microservices architecture.</p>
+                </div>
+                <div class="tech-card bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-blue-600 mb-4">
+                        <i class="bi bi-hdd-network text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">AWS</h3>
+                    <p>Robust cloud infrastructure ensuring high performance and reliability.</p>
+                </div>
+                <div class="tech-card bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-blue-600 mb-4">
+                        <i class="bi bi-code-square text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Java & Spring Boot</h3>
+                    <p>Enterprise-grade development for scalable and maintainable applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text">Key Projects</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-blue-600"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4">Travaio</h3>
+                        <p class="mb-4">A seamless cab booking platform connecting vendors, drivers, and customers.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700">Learn More →</a>
+                    </div>
+                </div>
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-blue-600"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4">Facial Recognition</h3>
+                        <p class="mb-4">Advanced AI for security and user identification systems.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700">Learn More →</a>
+                    </div>
+                </div>
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-blue-600"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4">Smart Vehicle QR</h3>
+                        <p class="mb-4">Enhanced vehicle security and fleet management solutions.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text">Get in Touch</h2>
+            <div class="max-w-2xl mx-auto">
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                        <input type="text" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                        <input type="email" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                        <textarea rows="4" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">TivaraX</h3>
+                    <p class="text-gray-400">Innovating the Future of Technology</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#technologies" class="text-gray-400 hover:text-white">Technologies</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white">Projects</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact Info</h4>
+                    <p class="text-gray-400">contact@tivarax.com</p>
+                    <p class="text-gray-400">+1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>© 2023 TivaraX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('translate-x-full');
+        }
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+
+</html>
